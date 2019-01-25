@@ -53,9 +53,9 @@ class Rectangle {
 }
 
 class Cuboid {
-  double _width;
-  double _length;
-  double _height;
+  double _width, _length, _height;
+  // double _length;
+  // double _height;
   Cuboid(this._width, this._length, this._height);
   Cuboid.fromSides({double width = 1, double length = 1, double height = 1}) {
     this._width = width;
@@ -155,7 +155,7 @@ efg""";
   assert(s1 == s2);
   print(s2);
 
-  const rawString = r"a\nb\nb\nc\nd\n";
+  const rawString = r"There is no special treatment with \n";
   print(rawString);
 
   const constList = const [1, 2, 3];
