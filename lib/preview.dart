@@ -88,4 +88,10 @@ main() {
   }
 
   print("Result of add(): ${add()}");
+
+  const emp = const {
+    "firstName": "Bob",
+    "middleName": "Jerry",
+    "familyName": "Licon"
+  };
 }

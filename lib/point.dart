@@ -1,8 +1,8 @@
 import "dart:math";
 
-class Mypoint {
+class Point {
   int _x = 0, _y = 0;
-  Mypoint(this._x, this._y);
+  Point(this._x, this._y);
   static List<int> xY = [];
   static bool checkX(int x) {
     return x >= 0;
@@ -53,10 +53,10 @@ class Mypoint {
     return sqrt(dx * dx + dy * dy);
   }
 
-  double anotherDistance(Mypoint another) {
-    var s = sqrt((another.x - _x) * (another.x - _x) +
-        (another.y - _y) * (another.y - _y));
-    return s;
+  double anotherDistance(Point another) {
+    var dx = another.x - _x;
+    var dy = another.y - _y;
+    return sqrt(dx * dx + dy * dy);
   }
 
   double distanceFromOrigin() {
@@ -70,7 +70,7 @@ class Mypoint {
 }
 
 main(List<String> args) {
-  var mypoint = Mypoint(3, 4);
+  var mypoint = Point(3, 4);
   print(mypoint);
   mypoint.setXY(5, 6);
   print(mypoint);
@@ -78,6 +78,6 @@ main(List<String> args) {
   print(s);
   var s1 = mypoint.distanceFromOrigin();
   print(s1);
-  var s2 = mypoint.anotherDistance(Mypoint(3, 7));
+  var s2 = mypoint.anotherDistance(Point(3, 7));
   print(s2);
 }

@@ -39,19 +39,19 @@ class Time {
   }
 
   set hour(int h) {
-    if (checkTime(h, _minute, _second)) {
+    if (checkHour(h)) {
       _hour = h;
     }
   }
 
   set minute(int m) {
-    if (checkTime(_hour, m, _second)) {
+    if (checkMinute(m)) {
       _minute = m;
     }
   }
 
   set second(int s) {
-    if (checkTime(_hour, _minute, s)) {
+    if (checkSecond(s)) {
       _second = s;
     }
   }
